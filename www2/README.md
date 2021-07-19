@@ -1,1 +1,0 @@
-bootstrap fucking sucks

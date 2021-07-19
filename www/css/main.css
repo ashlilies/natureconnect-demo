@@ -3,67 +3,105 @@
  * & generic page background.
  */
 
+/* global overrides because defaults fallback sucks
+ * times new roman really sucks */
 * {
   font-family: Arial;
   text-align: center;
 }
-#pageTop h1 {
-  font-family: "Candara", "Helvetica", "Arial", sans-serif;
-  font-size: 3em;
-  font-weight: normal;
-  text-align: center;
-}
 
-/* fancy gloss navbar thingy */
-/* first, the navbar box */
-#pageTop #navbar {
+/* THE PAGETOP NAVBAR 'pageTop' STARTS HERE - not to be confused with 'NAVBAR'
+ * - the actual navigation menu */
+/* fancy gloss pagetop bar thingy */
+#pageTop {
   box-shadow: 0 0 15px 3px #000000bb;
   /* blurs the bg */
   /* backdrop-filter only works in Chromium/Webkit; otherwise use workaround */
   backdrop-filter: blur(8px);
 
   /* rest of settings */
-  width: 60%;
+  width: 95%;
   margin: auto;
-  height: 50px;
+  height: 75px;
   padding: 7px;
   padding-bottom: 15px;
   border-radius: 20px;
+
+  /* fixed top menu */
+  position: fixed;
+  top: 0;
+  left: 2.5%;
+}
+/* our website logo */
+#pageTop h1 {
+  font-family: "Candara", "Helvetica", "Arial", sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
+  float: left;
+}
+
+/* our accounts buttons */
+/* #pageTop #accounts ul {
+  float: left;
+}
+
+#pageTop #accounts ul li {
+  display: inline;
+  list-style-type: none;
+} */
+
+/* the navigation box */
+#pageTop #navbar {
+  float: right;
+  margin-top: 0.8em;
+}
+
+#pageTop #navbar ul {
+  background-color: #00000000;
 }
 
 /* navbar items */
-#pageTop #navbar li {
+#pageTop #navbar ul li {
   display: inline;
   padding: 8px;
   font-size: 1.5em;
   background-color: #a2facebb;
   border-radius: 10px;
-  background-image: linear-gradient(    /* chrome */
+  background-image: linear-gradient( /* chrome */
       hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%,
       hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2)
     );
+  transition: 0.3s;
 }
 
-#pageTop #navbar #navbarCurrentPage {
+/* how the current page is highlighted */
+#pageTop #navbar ul #navbarCurrentPage {
   background-color: #35bd78bb;
 }
 
-#pageTop #navbar li:hover {
+/* when hovering over navbar items */
+#pageTop #navbar ul li:hover {
   background-color: #4bfaa2bb;
 }
 
 /* when holding mouse button down on the navbar buttons */
-#pageTop #navbar li:not(#navbarCurrentPage):active {
+#pageTop #navbar ul li:not(#navbarCurrentPage):active {
   background-color: #3ebb7cbb;
 }
 
 /* for navbar links */
-#pageTop #navbar a {
+#pageTop #navbar ul a {
   color: #ebfff5;
   text-shadow: 0 0 15px #ffbdeb;
   text-decoration: none;
 }
 
+/* THE PAGETOP NAVBAR ENDS HERE */
+
+/* TODO: ADD MOTD STYLING HERE... */
+
+/* GENERAL OVERRIDES FOR BODY STARTS HERE */
 /* and on to the main part... */
 body {
   font-family: Arial, sans-serif;
@@ -72,8 +110,13 @@ body {
   background-image: url("../assets/background.gif");
   color: #eeeeeeee;
   text-shadow: 0 0 15px #294035;
+
+  /* because position fixed topbar overlays content, so we need a margin-top */
+  margin-top: 85px;
 }
 
 body #pageBackground {
   filter: blur(8px);
 }
+
+/* GENERAL OVERRIDES FOR BODY ENDS HERE */

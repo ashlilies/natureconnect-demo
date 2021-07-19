@@ -1,0 +1,79 @@
+/* COPYRIGHT (c) 2021 Ashlee Tan. All rights reserved. */
+/* Main.css meant for all web pages. Contains only generic stuff such as navbar
+ * & generic page background.
+ */
+
+* {
+  font-family: Arial;
+  text-align: center;
+}
+#pageTop h1 {
+  font-family: "Candara", "Helvetica", "Arial", sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* fancy gloss navbar thingy */
+/* first, the navbar box */
+#pageTop #navbar {
+  box-shadow: 0 0 15px 3px #000000bb;
+  /* blurs the bg */
+  /* backdrop-filter only works in Chromium/Webkit; otherwise use workaround */
+  backdrop-filter: blur(8px);
+
+  /* rest of settings */
+  width: 60%;
+  margin: auto;
+  height: 50px;
+  padding: 7px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+}
+
+/* navbar items */
+#pageTop #navbar li {
+  display: inline;
+  padding: 8px;
+  font-size: 1.5em;
+  background-color: #a2facebb;
+  border-radius: 10px;
+  background-image: linear-gradient(    /* chrome */
+      hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%,
+      hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2)
+    );
+}
+
+#pageTop #navbar #navbarCurrentPage {
+  background-color: #35bd78bb;
+}
+
+#pageTop #navbar li:hover {
+  background-color: #4bfaa2bb;
+}
+
+/* when holding mouse button down on the navbar buttons */
+#pageTop #navbar li:not(#navbarCurrentPage):active {
+  background-color: #3ebb7cbb;
+}
+
+/* for navbar links */
+#pageTop #navbar a {
+  color: #ebfff5;
+  text-shadow: 0 0 15px #ffbdeb;
+  text-decoration: none;
+}
+
+/* and on to the main part... */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  /* background-color: black; */
+  background-image: url("../assets/background.gif");
+  color: #eeeeeeee;
+  text-shadow: 0 0 15px #294035;
+}
+
+body #pageBackground {
+  filter: blur(8px);
+}

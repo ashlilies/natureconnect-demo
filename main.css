@@ -1,0 +1,36 @@
+/* COPYRIGHT (c) 2021 Ashlee Tan. All rights reserved. */
+/* main.css meant for all web pages. Contains only generic stuff such as navbar
+ * & generic page background.
+ */
+
+/* pageTop navbar custom overrides */
+#pageTop .nav {
+  box-shadow: 0 0 15px 3px #000000bb;
+  /* blurs the bg */
+  /* backdrop-filter only works in Chromium/Webkit; otherwise use workaround TODO */
+  backdrop-filter: blur(8px);
+
+  /* rest of settings */
+  height: 50px;
+  padding: 7px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+
+  /* fancy glow white thing */
+  text-shadow: 0 0 15px #ffbdeb;
+}
+
+/* text colour of navbar links */
+#pageTop .nav-item {
+  color: white;
+}
+
+/* for navbar ACTIVE ITEM - green bg colour, semi-transparency */
+#pageTop .nav-item.active {
+  background-color: #35bd78bb;
+}
+
+/* body content overrides */
+body {
+  background-image: url("../assets/background.gif");
+}

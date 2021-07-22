@@ -1,0 +1,123 @@
+/* COPYRIGHT (c) 2021 Ashlee Tan. All rights reserved. */
+/* main.css meant for all web pages. Contains only generic stuff such as navbar
+ * & generic page background.
+ */
+
+ /* we hate times new roman */
+ * {
+   font-family: Candara, Arial, sans-serif;
+   color: white;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+/* pageTop bar custom overrides */
+#pageTop {
+  box-shadow: 0 0 15px 3px #000000bb;
+  /* blurs the bg */
+  /* backdrop-filter only works in Chromium/Webkit; otherwise use workaround TODO */
+  backdrop-filter: blur(8px);
+
+  /* rest of settings */
+  height: 3em;
+  padding: 4px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+  margin-bottom: 1em;
+
+  width: 95%;
+
+  /* fancy glow white thing */
+  text-shadow: 0 0 15px #fafafa;
+}
+
+/* text colour of navbar links */
+#pageTop .nav-item {
+  color: white;
+  /* margin-left: auto; */
+}
+
+/* hovering over navbar items excluding active item */
+#pageTop .nav-item:not(.active):hover {
+  background-color: #35bd7866;
+  transition: 0.3s;
+
+  box-shadow: 0 0 15px 1px #00000033;
+}
+
+/* for navbar CURRENT (active in BS) ITEM - green bg colour, semi-transparency */
+#pageTop .nav-item.active {
+  background-color: #35bd78bb;
+  box-shadow: 0 0 15px 3px #000000bb;
+}
+
+#pageTop #logo {
+  float: left;
+  color: white;
+  text-shadow: none;
+}
+
+ul.nav {
+  float: right;
+}
+
+/* TODO: ADD MOTD STYLING HERE... */
+#motd {
+  box-shadow: 0 0 15px 3px #000000bb;
+  background-color: #fffdc9bb;
+
+  border-radius: 20px;
+  padding: 3px;
+
+  position: -webkit-sticky;
+  position: sticky;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+#motd > #visible {
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+#motd > #close {
+  cursor: pointer;
+  float: right;
+  padding-right: 7px;
+  color: #575757;
+}
+
+
+/* main.css body content overrides */
+body {
+  background-image: url("../assets/background.gif");
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body a {
+  color: #c3e3cfbb;
+  transition: 0.3s;
+}
+
+body a:hover {
+  color: #c3e3cfee;
+  text-shadow: 0 0 15px #fafafa;
+}
+
+.fade_rule {
+        height: 1px;
+        background-color: #E6E6E6;
+        width: 100%;
+        margin: 0 auto;
+        background: rgb(255,255,255);
+       background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9654061453683036) 50%, rgba(255,255,255,0) 100%);
+       background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9654061453683036) 50%, rgba(255,255,255,0) 100%);
+       background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9654061453683036) 50%, rgba(255,255,255,0) 100%);
+       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}

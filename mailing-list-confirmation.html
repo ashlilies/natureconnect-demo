@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <!-- web storage - extra marks, geolocation, drag-and-drop, 1 regex/validation -->
+
+    <!-- Our custom CSS & JS -->
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+
+    <style media="screen">
+      #backButton {
+        text-decoration: none;
+      }
+
+      #fancyBack li {
+        display: inline;
+        padding: 8px;
+        font-size: 1.5em;
+        background-color: #35bd78bb;
+        border-radius: 10px;
+        /* background-image: linear-gradient( hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2) ); */
+        background-color: #ffffff33;
+        box-shadow: 0 0 15px 3px #000000bb;
+      }
+
+      #fancyBack li:active {
+        box-shadow: 0 0 15px 3px #00000033;
+      }
+
+      /* #fancyBack a:hover {
+        text-shadow: none;
+      } */
+    </style>
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("mailAdd").innerHTML = getParam("mailingListAdd");
+    });
+    </script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Bootstrap & dependencies -->
+    <!-- Proper rendering & touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest DOWNLOADED compiled and minified CSS -->
+    <link rel="stylesheet" href="dependencies/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <!-- jQuery library -->
+    <script src="dependencies/jquery/jquery-3.6.0.js"></script>
+    <!-- Popper JS -->
+    <script src="dependencies/popper-1.16.0/popper.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="dependencies/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div id="pageTop" class="container-fluid">
+      <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row"></li>
+        <li><a href="index.html" class="nav-item nav-link">Home</a></li>
+        <li><a href="calendar.html" class="nav-item nav-link">Calendar</a></li>
+        <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
+        <li><a href="shop.html" class="nav-item nav-link">Shop</a></li>
+        <li><a href="posts.html" class="nav-item nav-link">Posts</a></li>
+      </ul>
+    </div>
+    <!-- workaround for bootstrap alignment _reboot.css messing everything up -->
+    <!-- <br id="navbarGap"> -->
+    <div id="motd">
+      <span class="span12" id="visible">Loading...</span>
+      <span id="close" onclick="closeMotd();">&times;</span>
+    </div>
+    <div id="content">
+      <div id="thing">
+        <h1>Thank you for signing up!</h1>
+        <p>Your e-mail <strong><span id="mailAdd"></span></strong> has been added to the mailing list.</p>
+        <ul id="fancyBack">
+          <a id="backButton" href="javascript:window.history.back()"><li>Go Back</li></a>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer">
+      <footer><br>Copyright &copy; Ashlee Tan, 2021</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <!-- web storage - extra marks, geolocation, drag-and-drop, 1 regex/validation -->
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+
+    <link rel="stylesheet" href="css/calendar.css">
+    <!-- Bootstrap & dependencies -->
+    <!-- Proper rendering & touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest DOWNLOADED compiled and minified CSS -->
+    <link rel="stylesheet" href="dependencies/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <!-- jQuery library -->
+    <script src="dependencies/jquery/jquery-3.6.0.js"></script>
+    <!-- Popper JS -->
+    <script src="dependencies/popper-1.16.0/popper.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="dependencies/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div id="pageTop" class="container-fluid">
+      <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row"></li>
+        <li><a href="index.html" class="nav-item nav-link" onclick="highlightNav(this);">Home</a></li>
+        <li><a href="#" class="nav-item nav-link active">Calendar</a></li>
+        <li><a href="#" class="nav-item nav-link">Gallery</a></li>
+        <li><a href="#" class="nav-item nav-link">Shop</a></li>
+        <li><a href="#" class="nav-item nav-link">Posts</a></li>
+      </ul>
+    </div>
+    <!-- workaround for bootstrap alignment _reboot.css messing everything up -->
+    <!-- <br id="navbarGap"> -->
+    <div id="motd">
+      <span class="span12" id="visible">Loading...</span>
+      <span id="close" onclick="closeMotd();">&times;</span>
+    </div>
+    <div id="content">
+      <div id="title">
+        <h1>Calendar of Events</h1>
+      </div>
+    </div>
+    <div class="footer">
+      <footer><br>Copyright &copy; Ashlee Tan, 2021</footer>
+    </div>
+  </body>
+</html>

@@ -14,9 +14,6 @@
 /* pageTop bar custom overrides */
 #pageTop {
   box-shadow: 0 0 15px 3px #000000bb;
-  /* blurs the bg */
-  /* backdrop-filter only works in Chromium/Webkit; otherwise use workaround TODO */
-  backdrop-filter: blur(8px);
 
   /* rest of settings */
   height: 3em;

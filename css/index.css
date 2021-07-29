@@ -13,6 +13,20 @@
   box-shadow: 0 0 15px 3px #000000bb;
 }
 
+#carouselExampleDark {
+  width: 50%;
+  height: 30%;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 3px #000000bb;
+}
+
+#carouselExampleDark img {
+  width: 50%;
+  height: 30%;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 3px #000000bb;
+}
+
 #mailingList {
   color: white;
 }

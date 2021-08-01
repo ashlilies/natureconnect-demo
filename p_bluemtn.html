@@ -2,15 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
-    <!-- web storage - extra marks, geolocation, drag-and-drop, 1 regex/validation -->
+    <title>Blue Mountains</title>
 
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="script/main.js"></script>
     <link rel="icon" type="image/png" href="favicon.png"/>
 
-    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/post.css">
     <!-- Bootstrap & dependencies -->
     <!-- Proper rendering & touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,12 +25,12 @@
   <body>
     <div id="pageTop" class="container-fluid">
       <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
-      <ul class="nav navbar-default nav-pills flex-column flex-sm-row"></li>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row">
         <li><a href="index.html" class="nav-item nav-link">Home</a></li>
-        <li><a href="#" class="nav-item nav-link active">Calendar</a></li>
+        <li><a href="calendar.html" class="nav-item nav-link">Calendar</a></li>
         <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
         <li><a href="shop.html" class="nav-item nav-link">Shop</a></li>
-        <li><a href="posts.html" class="nav-item nav-link">Posts</a></li>
+        <li><a href="posts.html" class="nav-item nav-link active">Posts</a></li>
         <!-- padding for the right side so that the hover doesn't extend past-->
         <span>&nbsp;&nbsp;</span>
       </ul>
@@ -43,11 +42,22 @@
       <span id="close" onclick="closeMotd();">&times;</span>
     </div>
     <div id="content">
-      <div id="title">
-        <h1>Calendar of Events</h1>
+      <h1>Blue Mountains Sightseeing</h1>
+      <div id="post_video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/76SRHNPJ1zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div id="calendar">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23009688&amp;ctz=Asia%2FSingapore&amp;src=ZmhjNHY2ZGw3ODdtajgwOTRtb3ZnMmdhajhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23D50000&amp;color=%230B8043&amp;title=NatureConnect%20Events" style="border:solid 1px #777;   box-shadow: 0 0 15px 3px #000000bb;" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <table border="0">
+        <tr>
+          <td id="author_cell"><div class="jane_doe" id="avatar"></div>By: Jane Doe</td>
+          <td id="date_cell">Monday, 24 June 2021</td>
+        </tr>
+      </table>
+      <div class="fade_rule"></div>
+      <div id="postContent">
+        <p>The <strong>Blue Mountains</strong> is a rugged region west of Sydney in Australia’s New South Wales. Known for dramatic scenery, it encompasses steep cliffs, eucalyptus forests, waterfalls and villages dotted with guesthouses, galleries and gardens. Katoomba, a major town in the area, borders Blue Mountains National Park and its bushwalking trails. Echo Point affords views of the storied Three Sisters sandstone rock formation.</p>
+        <p>More recently, since the early 2010s, the region's biodiversity and infrastructure has been severely affected by massive bushfires of unprecedented size and impact.</p>
+          <a href="https://en.wikipedia.org/wiki/Blue_Mountains_(New_South_Wales)"><p>View relevant Wikipedia article</p></a>
+        </div>
       </div>
     </div>
     <div class="footer">

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Himalayas Trek</title>
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <link rel="stylesheet" href="css/post.css">
+    <!-- Bootstrap & dependencies -->
+    <!-- Proper rendering & touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest DOWNLOADED compiled and minified CSS -->
+    <link rel="stylesheet" href="dependencies/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <!-- jQuery library -->
+    <script src="dependencies/jquery/jquery-3.6.0.js"></script>
+    <!-- Popper JS -->
+    <script src="dependencies/popper-1.16.0/popper.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="dependencies/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div id="pageTop" class="container-fluid">
+      <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row">
+        <li><a href="index.html" class="nav-item nav-link">Home</a></li>
+        <li><a href="calendar.html" class="nav-item nav-link">Calendar</a></li>
+        <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
+        <li><a href="shop.html" class="nav-item nav-link">Shop</a></li>
+        <li><a href="posts.html" class="nav-item nav-link active">Posts</a></li>
+        <!-- padding for the right side so that the hover doesn't extend past-->
+        <span>&nbsp;&nbsp;</span>
+      </ul>
+    </div>
+    <!-- workaround for bootstrap alignment _reboot.css messing everything up -->
+    <!-- <br id="navbarGap"> -->
+    <div id="motd">
+      <span class="span12" id="visible">Loading...</span>
+      <span id="close" onclick="closeMotd();">&times;</span>
+    </div>
+    <div id="content">
+      <h1>Himalayas Trek</h1>
+      <div id="post_video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-hTVNidxg2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <table border="0">
+        <tr>
+          <td id="author_cell"><div class="jane_doe" id="avatar"></div>By: Jane Doe</td>
+          <td id="date_cell">Monday, 26 July 2021</td>
+        </tr>
+      </table>
+      <div class="fade_rule"></div>
+      <div id="postContent">
+        <p>The <strong>Himalayas</strong> are a mountain range in South and East Asia separating the plains of the Indian subcontinent from the Tibetan Plateau. The range has many of Earth's highest peaks, including the highest, Mount Everest, at the border between Nepal and China. The Himalayas include over fifty mountains exceeding <em>7,200 metres</em> in elevation, including ten of the fourteen 8,000-metre peaks. By contrast, the highest peak outside Asia (Aconcagua, in the Andes) is <em>6,961 metres</em> tall.</p>
+        <p>The vast size, huge altitude range, and complex topography of the Himalayas mean they experience a wide range of climates, from humid subtropical in the foothills to cold and dry desert conditions on the Tibetan side of the range. For much of the Himalayas – that on the south side of the high mountains, except in the furthest west, the most characteristic feature of the climate is the monsoon. Heavy rain arrives on the southwest monsoon in June and persists until September. The monsoon can seriously impact transport and cause major landslides. It restricts tourism – the trekking and mountaineering season is limited to either before the monsoon in April/May or after the monsoon in October/November (autumn). In Nepal and Sikkim, there are often considered to be five seasons: summer, monsoon, autumn, (or post-monsoon), winter, and spring. </p>
+        <div id="wiki_link">
+          <a href="https://en.wikipedia.org/wiki/Himalayas#Culture"><p>View relevant Wikipedia article</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer><br>Copyright &copy; Ashlee Tan, 2021</footer>
+    </div>
+  </body>
+</html>

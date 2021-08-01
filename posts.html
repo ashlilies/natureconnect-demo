@@ -2,15 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>Posts Archive</title>
     <!-- web storage - extra marks, geolocation, drag-and-drop, 1 regex/validation -->
 
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="script/main.js"></script>
+
     <link rel="icon" type="image/png" href="favicon.png"/>
 
-    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/posts.css">
     <!-- Bootstrap & dependencies -->
     <!-- Proper rendering & touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,12 +27,12 @@
   <body>
     <div id="pageTop" class="container-fluid">
       <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
-      <ul class="nav navbar-default nav-pills flex-column flex-sm-row"></li>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row">
         <li><a href="index.html" class="nav-item nav-link">Home</a></li>
-        <li><a href="#" class="nav-item nav-link active">Calendar</a></li>
+        <li><a href="calendar.html" class="nav-item nav-link">Calendar</a></li>
         <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
         <li><a href="shop.html" class="nav-item nav-link">Shop</a></li>
-        <li><a href="posts.html" class="nav-item nav-link">Posts</a></li>
+        <li><a href="posts.html" class="nav-item nav-link active">Posts</a></li>
         <!-- padding for the right side so that the hover doesn't extend past-->
         <span>&nbsp;&nbsp;</span>
       </ul>
@@ -43,11 +44,20 @@
       <span id="close" onclick="closeMotd();">&times;</span>
     </div>
     <div id="content">
-      <div id="title">
-        <h1>Calendar of Events</h1>
+      <div id="LatestPosts">
+        <h1>Post Archive</h1>
+        <!-- an image carousel showing the latest photographs-->
       </div>
-      <div id="calendar">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23009688&amp;ctz=Asia%2FSingapore&amp;src=ZmhjNHY2ZGw3ODdtajgwOTRtb3ZnMmdhajhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23D50000&amp;color=%230B8043&amp;title=NatureConnect%20Events" style="border:solid 1px #777;   box-shadow: 0 0 15px 3px #000000bb;" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <div id="content">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+            The current link item
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+          <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+          <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+          <a href="#" class="list-group-item list-group-item-action" tabindex="-1" aria-disabled="true">A disabled link item</a>
+        </div>
       </div>
     </div>
     <div class="footer">

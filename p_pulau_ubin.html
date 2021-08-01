@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pulau Ubin</title>
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <link rel="stylesheet" href="css/post.css">
+    <!-- Bootstrap & dependencies -->
+    <!-- Proper rendering & touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest DOWNLOADED compiled and minified CSS -->
+    <link rel="stylesheet" href="dependencies/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <!-- jQuery library -->
+    <script src="dependencies/jquery/jquery-3.6.0.js"></script>
+    <!-- Popper JS -->
+    <script src="dependencies/popper-1.16.0/popper.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="dependencies/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div id="pageTop" class="container-fluid">
+      <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row">
+        <li><a href="index.html" class="nav-item nav-link">Home</a></li>
+        <li><a href="calendar.html" class="nav-item nav-link">Calendar</a></li>
+        <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
+        <li><a href="shop.html" class="nav-item nav-link">Shop</a></li>
+        <li><a href="posts.html" class="nav-item nav-link active">Posts</a></li>
+        <!-- padding for the right side so that the hover doesn't extend past-->
+        <span>&nbsp;&nbsp;</span>
+      </ul>
+    </div>
+    <!-- workaround for bootstrap alignment _reboot.css messing everything up -->
+    <!-- <br id="navbarGap"> -->
+    <div id="motd">
+      <span class="span12" id="visible">Loading...</span>
+      <span id="close" onclick="closeMotd();">&times;</span>
+    </div>
+    <div id="content">
+      <h1>Pulau Ubin Exploration</h1>
+      <div id="post_video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pltIFJ95CWY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <table border="0">
+        <tr>
+          <td id="author_cell"><div class="jane_doe" id="avatar"></div>By: Jane Doe</td>
+          <td id="date_cell">Monday, 15 February 2021</td>
+        </tr>
+      </table>
+      <div class="fade_rule"></div>
+      <div id="postContent">
+        <p><strong>Pulau Ubin, Singapore</strong> is an island northeast of mainland Singapore. Cycle trails and footpaths criss-cross the hills, going past disused granite quarries and traditional kampongs (villages). Kingfishers and bulbul birds inhabit the tidal flats and mangroves of the Chek Jawa Wetlands. The Jejawi observation tower and a looped boardwalk offer views of this area. Fo Shan Ting Da Bo Gong Temple houses statues of local deities.</p>
+        <p>Pulau Ubin first appeared on map in an 1828 sketch of the Island of Singapore as Pulo Obin and in Franklin and Jackson's map as Po. Ubin. Since the British founding of Singapore, the island has been known for its granite. The numerous granite quarries on the island supply the local construction industry. The granite outcrops are particularly spectacular from the sea because their grooves and fluted sides create furrows and ridges on each granite rock slab. These features are captured in John Turnbull Thomson's 1850 painting — Grooved stones on Pulo Ubin near Singapore.</p>
+          <a href="https://en.wikipedia.org/wiki/Pulau_Ubin"><p>View relevant Wikipedia article</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer><br>Copyright &copy; Ashlee Tan, 2021</footer>
+    </div>
+  </body>
+</html>

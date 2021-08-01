@@ -1,0 +1,37 @@
+#content > .list-group {
+  width: 70%;
+  border-radius: 20px;
+
+  background-color: #ffffff06;
+  box-shadow: 0 0 15px 3px #000000bb;
+  /* fancy glow white thing */
+  text-shadow: 0 0 15px #fafafa;
+}
+
+.list-group > * > * {
+  color: #ffffff;
+}
+
+.list-group > .list-group-item:first-child {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.list-group > .list-group-item {
+  background-color: #00000000;
+  color: inherit;
+}
+
+.list-group > .list-group-item:hover {
+  background-color: #35bd78bb;
+  color: inherit;
+}
+
+.list-group > .list-group-item:focus {
+  background-color: #35bd78bb;
+  color: inherit;
+}
+
+.list-group > .list-group-item.disabled {
+  background-color: #00000099;
+  color: inherit;
+}

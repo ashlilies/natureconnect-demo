@@ -1,0 +1,27 @@
+/* for posts only */
+
+table {
+  margin-bottom: 1em;
+}
+td {
+  width: 280px;
+  border-style: none;
+}
+#author_cell {
+  text-align: left;
+}
+#date_cell {
+  text-align: right;
+}
+
+
+#postContent {
+  margin-top: 2em;
+  width: 70%;
+  font-size: 16px;
+
+  box-shadow: 0 0 15px 3px #000000bb;
+  padding: 4px;
+  border-radius: 20px;
+  background-color: #ffffff06;
+}

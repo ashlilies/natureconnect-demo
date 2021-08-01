@@ -1,3 +1,14 @@
 /* COPYRIGHT (c) 2021 Ashlee Tan. All rights reserved. */
 /* calendar.css meant for calendar.html.
  */
+
+#calendar {
+  box-shadow: 0 0 15px 3px #000000bb;
+
+  /* rest of settings */
+
+  width: 800px;
+  height: 600px;
+  /* fancy glow white thing */
+  text-shadow: 0 0 15px #fafafa;
+  }

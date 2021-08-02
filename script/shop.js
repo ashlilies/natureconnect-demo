@@ -75,7 +75,7 @@ function show_cart()
       let new_elem = document.createElement("li");
       new_elem.classList.add("list-group-item");
 
-      new_elem.innerHTML = shopping_cart[i] + " <b>($" + shopping_cart_prices[i] + ")</b>";
+      new_elem.innerHTML = shopping_cart[i] + " <b>($" + shopping_cart_prices[i].toFixed(2) + ")</b>";
     /* then append it */
     modal_body.appendChild(new_elem);
   }

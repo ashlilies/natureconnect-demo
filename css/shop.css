@@ -68,6 +68,10 @@
   border-color: #35bd78bb;
 }
 
+#Shopping_Cart_Checkout_Modal .modal .btn-primary:focus {
+  outline-color: #35bd78bb;
+}
+
 #Shopping_Cart_Checkout_Modal #checkout_cart_list li {
   width: 100%;
 }

@@ -68,7 +68,7 @@ function show_cart()
 
 
   /* if cart empty, we show fancy text to say so, else we initialize it to prevent adding same thing every single time */
-  shopping_cart.length == 0 ? modal_body.innerHTML = "<strong>No elements in cart...</strong>" : modal_body.innerHTML = "";
+  shopping_cart.length == 0 ? modal_body.innerHTML = "<strong>No items in cart...</strong>" : modal_body.innerHTML = "";
 
   for (i = 0; i < shopping_cart.length; i++) {
     /* create new elem */

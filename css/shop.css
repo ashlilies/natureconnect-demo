@@ -75,3 +75,9 @@
 #Shopping_Cart_Checkout_Modal #checkout_cart_list li {
   width: 100%;
 }
+
+/* background of the checkout modal */
+#Shopping_Cart_Checkout_Modal .modal-content {
+  background-color: #ffffffee;
+  border-radius: 20px;
+}

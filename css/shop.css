@@ -77,7 +77,11 @@
 }
 
 /* background of the checkout modal */
-#Shopping_Cart_Checkout_Modal .modal-content, #Shopping_Cart_Checkout_Modal .list-group-item {
+#Shopping_Cart_Checkout_Modal .modal-content {
   background-color: #ffffffee;
   border-radius: 20px;
+}
+
+#Shopping_Cart_Checkout_Modal .list-group-item {
+  background-color: #ffffffee;
 }

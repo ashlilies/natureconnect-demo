@@ -44,6 +44,10 @@ function upd_price()
     total_price += shopping_cart_prices[i];
 
   total_price_elem.innerHTML = total_price.toFixed(2);
+
+  /* on the checkout page */
+  cart_total_elem = document.getElementById("checkout_total");
+  cart_total_elem.innerHTML = total_price.toFixed(2);
 }
 
 /* make all item cells clickable */

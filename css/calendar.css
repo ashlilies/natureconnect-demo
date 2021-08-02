@@ -12,3 +12,7 @@
   /* fancy glow white thing */
   text-shadow: 0 0 15px #fafafa;
   }
+
+#calendar, #calendar > * {
+  border-radius: 10px;
+}

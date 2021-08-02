@@ -27,6 +27,7 @@
 .item_cell .item_info {
   vertical-align: middle;
   width: 180px;
+  height: 56px;
 
   margin-top: 5px;
 }

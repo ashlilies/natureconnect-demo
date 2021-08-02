@@ -82,6 +82,18 @@ function show_cart()
 
 }
 
+/* when user clicks on btn-danger Clear Cart we onclick this function... */
+function clear_cart_confirm()
+{
+  confirmation = confirm("Are you sure you wish to clear the Cart?");
+
+  if (confirmation) {
+    shopping_cart = [], shopping_cart_prices = [];
+    $("#exampleModal").modal("hide");
+    upd_price();
+  }
+}
+
 /* equivalent of our main() function in JS, but executed only on page load to
  * prevent issues */
 document.addEventListener("DOMContentLoaded", function() {
@@ -94,6 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 );
 
-/* global variable  - shopping cart array and price array */
+/* global variable init a la main() - shopping cart array and price array, ran when js loaded */
 var shopping_cart = [];
 var shopping_cart_prices = [];

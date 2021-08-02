@@ -55,16 +55,25 @@ function highlightNav(elem)
   elem.parentElement.style.borderRadius = "0.25rem";
 }
 
+/* useful for a lot of other functions here */
+function get_current_page_filename()
+{
+  let path = window.location.pathname;
+  let page = path.split("/").pop();
+  return page;
+}
+
+/* load the current motd for all pages in a function */
 function loadMotd()
 {
   let motdBanner = document.getElementById("motd");
   motdBanner.querySelector("#" + "visible").innerHTML = "Buy our latest souvenirs today from the Shop!";
 }
 
-/* load motd on page load */
+/* our main() function, but in js, once the page is loaded execute what? */
 document.addEventListener("DOMContentLoaded", function() {
     motdChecker();
-  }
+}
 );
 
 /* get url parameters */

@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.item_cell:hover {
+  box-shadow: 0 0 15px 3px #00000077;
+}
+
 .item_cell .item_info {
   vertical-align: middle;
   width: 180px;

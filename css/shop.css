@@ -63,6 +63,11 @@
   color: white;
 }
 
+#Shopping_Cart_Checkout_Modal .modal .btn-primary {
+  background-color: #35bd78bb;
+  border-color: #35bd78bb;
+}
+
 #Shopping_Cart_Checkout_Modal #checkout_cart_list li {
   width: 100%;
 }

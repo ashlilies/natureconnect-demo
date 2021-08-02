@@ -1,1 +1,64 @@
 /* for shop.html */
+
+.item_cell {
+  width: 200px;
+  height: 270px;
+
+  font-size: 18px;
+
+  box-shadow: 0 0 15px 3px #000000bb;
+  /* padding: 4px; */
+  border-radius: 20px;
+  background-color: #ffffff06;
+
+  /* fancy glow white thing */
+  text-shadow: 0 0 15px #fafafa;
+
+  text-align: center;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.item_cell .item_info {
+  vertical-align: middle;
+  width: 180px;
+
+  margin-top: 5px;
+}
+/* item name */
+.item_cell .item_info tr > td {
+  text-align: left;
+}
+
+/* item price */
+.item_cell .item_info tr > td:nth-child(2) {
+  text-align: right;
+}
+
+.item_cell > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+#product_listing > table {
+  border-collapse: separate;
+  border-spacing: 30px 30px;
+}
+
+.item_cell > .clickable_button {
+  vertical-align: center;
+}
+
+#Shopping_Cart_Checkout_Modal .modal:not(button) * {
+  color: black;
+}
+
+#Shopping_Cart_Checkout_Modal .modal button {
+  color: white;
+}
+
+#Shopping_Cart_Checkout_Modal #checkout_cart_list li {
+  width: 100%;
+}

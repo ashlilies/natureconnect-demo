@@ -128,6 +128,10 @@ iframe {
   text-decoration: none;
 }
 
+.clickable_button > a {
+  text-decoration: none;
+}
+
 .clickable_button > a > li {
   display: inline;
   padding: 8px;

@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="css/shop.css">
     <link rel="stylesheet" href="css/shop_template.css">
+    <script src="script/shop.js" charset="utf-8"></script>
     <!-- Bootstrap & dependencies -->
     <!-- Proper rendering & touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,208 +48,69 @@
       <div id="title">
         <h1>Buy Nature-Themed Merch</h1>
       </div>
-      <div id="actual_content">
-        <div class="container">
-          <div class="col-xs-12 col-md-6">
+      <div id="product_listing">
+        <table>
+          <!-- template for item cells (td)-->
+          <!--
+          <td class="item_cell">
+            <img src="content/shop/ITEMIMAGE.jpg"><table class="item_info"><tr><td>ITEMNAME</td><td>$ITEMPRICE</td></table></td> -->
 
-                          <!-- First product box start here-->
-                          <div class="prod-info-main prod-wrap clearfix">
+            <!-- <br><ul class="clickable_button"><a href="#" onclick="add_item()"><li>Add to Cart</li></a></ul> -->
+          <tr>
+            <!-- first row -->
+            <td class="item_cell">
+              <img src="content/shop/leaf_mug.jpg"><table class="item_info"><tr><td class="item_name">Leaf Mug</td><td class="item_price">$6.00</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/vase_flowers.jpg"><table class="item_info"><tr><td class="item_name">Vase with Flowers</td><td class="item_price">$9.00</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/air_plant.jpg"><table class="item_info"><tr><td class="item_name">Air Plant</td><td class="item_price">$4.00</td></table></td>
+          </tr>
+          <tr>
+            <!-- second row -->
+            <td class="item_cell">
+              <img src="content/shop/bigfoot.jpg"><table class="item_info"><tr><td class="item_name">Bigfoot Toy</td><td class="item_price">$13.00</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/mimosa.jpg"><table class="item_info"><tr><td class="item_name">Mimosa Seeds</td><td class="item_price">$7.00</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/bookmarks.jpg"><table class="item_info"><tr><td class="item_name">Assortment of Bookmarks</td><td class="item_price">$8.00</td></table></td>
+          </tr>
+        </table>
+        <h5>Total price of selected items: $<span id="shopping_cart_total">Loading...</span></h5>
+        <ul class="clickable_button"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="show_cart();"><li>Check Out</li></a></ul>
+      </div>
+    </div>
+    <div id="Shopping_Cart_Checkout_Modal">
 
-                                <div class="row">
-
-                                     <div class="col-md-5 col-sm-12 col-xs-12">
-
-                                      <div class="product-image">
-
-                                       <img src="images/products/p4.png" class="img-responsive">
-
-                                         <span class="tag2 hot">
-
-                                           SPECIAL
-
-                                         </span>
-
-                                 </div>
-
-                            </div>
-
-               <div class="col-md-7 col-sm-12 col-xs-12">
-
-                            <div class="product-deatil">
-
-                                         <h5 class="name">
-
-                                         <a href="#">
-
-                                          Product Code/Name here
-
-                                         </a>
-
-                                         <a href="#">
-
-                                         <span>Product Category</span>
-
-                                         </a>
-
-                                  </h5>
-
-                                      <p class="price-container">
-
-                                       <span>$199</span>
-
-                                     </p>
-
-                        <span class="tag1"></span>
-
-             </div>
-
-             <div class="description">
-
-                <p>A Short product description here </p>
-
-             </div>
-
-                <div class="product-info smart-form">
-
-                   <div class="row">
-
-                   <div class="col-md-12">
-
-                    <a href="#" class="btn btn-danger">Add to cart</a>
-
-                       <a href="javascript:void(0);" class="btn btn-info">More info</a>
-
-                 </div>
-
-                <div class="col-md-12">
-
-                   <div class="rating">Rating:
-
-                    <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
-
-                    <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
-
-                    <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
-
-                    <label for="stars-rating-2"><i class="fa fa-star text-warning"></i></label>
-
-                    <label for="stars-rating-1"><i class="fa fa-star text-warning"></i></label>
-
-                   </div>
-
-                 </div>
-
-              </div>
-
-             </div>
-
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
 
-            </div>
-           </div>
-
-           <!-- end product -->
-           <!-- Second product box start here-->
-              <div class="prod-info-main prod-wrap clearfix">
-
-                    <div class="row">
-
-                         <div class="col-md-5 col-sm-12 col-xs-12">
-
-                          <div class="product-image">
-
-                           <img src="images/products/p4.png" class="img-responsive">
-
-                             <span class="tag2 hot">
-
-                               SPECIAL
-
-                             </span>
-
-                     </div>
+              <!-- list of items in the shopping cart -->
+              <ul class="list-group list-group-flush" id="checkout_cart_list">
+                <div id="cart_display">
 
                 </div>
+                <!-- <li class="list-group-item">An item</li>
+                <li class="list-group-item">A sec.efkmsdlkfsdjlfkdsond item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li> -->
+              </ul>
 
-              <div class="col-md-7 col-sm-12 col-xs-12">
-
-                <div class="product-deatil">
-
-                             <h5 class="name">
-
-                             <a href="#">
-
-                              Product Code/Name here
-
-                             </a>
-
-                             <a href="#">
-
-                             <span>Product Category</span>
-
-                             </a>
-
-                      </h5>
-
-                          <p class="price-container">
-
-                           <span>$199</span>
-
-                         </p>
-
-              <span class="tag1"></span>
-
-              </div>
-
-              <div class="description">
-
-              <p>A Short product description here </p>
-
-              </div>
-
-              <div class="product-info smart-form">
-
-              <div class="row">
-
-              <div class="col-md-12">
-
-              <a href="#" class="btn btn-danger">Add to cart</a>
-
-              <a href="javascript:void(0);" class="btn btn-info">More info</a>
-
-              </div>
-
-              <div class="col-md-12">
-
-              <div class="rating">Rating:
-
-              <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
-
-              <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
-
-              <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
-
-              <label for="stars-rating-2"><i class="fa fa-star text-warning"></i></label>
-
-              <label for="stars-rating-1"><i class="fa fa-star text-warning"></i></label>
-
-              </div>
-
-              </div>
-
-              </div>
-
-              </div>
-
-              </div>
-
-              </div>
-              </div>
-
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Pay Now</button>
+            </div>
           </div>
-          </div>
-
-          </div>
+        </div>
       </div>
+
     </div>
     <div class="footer">
       <footer><br>Copyright &copy; Ashlee Tan, 2021</footer>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Merch Shop</title>
+    <!-- web storage - extra marks, geolocation, drag-and-drop, 1 regex/validation -->
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shop_template.css">
+    <!-- Bootstrap & dependencies -->
+    <!-- Proper rendering & touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest DOWNLOADED compiled and minified CSS -->
+    <link rel="stylesheet" href="dependencies/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <!-- jQuery library -->
+    <script src="dependencies/jquery/jquery-3.6.0.js"></script>
+    <!-- Popper JS -->
+    <script src="dependencies/popper-1.16.0/popper.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="dependencies/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div id="pageTop" class="container-fluid">
+      <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row">
+        <li><a href="index.html" class="nav-item nav-link">Home</a></li>
+        <li><a href="calendar.html" class="nav-item nav-link">Calendar</a></li>
+        <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
+        <li><a href="#" class="nav-item nav-link active">Shop</a></li>
+        <li><a href="posts.html" class="nav-item nav-link">Posts</a></li>
+        <!-- padding for the right side so that the hover doesn't extend past-->
+        <span>&nbsp;&nbsp;</span>
+      </ul>
+    </div>
+    <!-- workaround for bootstrap alignment _reboot.css messing everything up -->
+    <!-- <br id="navbarGap"> -->
+    <div id="motd">
+      <span class="span12" id="visible">Loading...</span>
+      <span id="close" onclick="closeMotd();">&times;</span>
+    </div>
+    <div id="content">
+      <div id="title">
+        <h1>Buy Nature-Themed Merch</h1>
+      </div>
+      <div id="actual_content">
+        <div class="container">
+          <div class="col-xs-12 col-md-6">
+
+                          <!-- First product box start here-->
+                          <div class="prod-info-main prod-wrap clearfix">
+
+                                <div class="row">
+
+                                     <div class="col-md-5 col-sm-12 col-xs-12">
+
+                                      <div class="product-image">
+
+                                       <img src="images/products/p4.png" class="img-responsive">
+
+                                         <span class="tag2 hot">
+
+                                           SPECIAL
+
+                                         </span>
+
+                                 </div>
+
+                            </div>
+
+               <div class="col-md-7 col-sm-12 col-xs-12">
+
+                            <div class="product-deatil">
+
+                                         <h5 class="name">
+
+                                         <a href="#">
+
+                                          Product Code/Name here
+
+                                         </a>
+
+                                         <a href="#">
+
+                                         <span>Product Category</span>
+
+                                         </a>
+
+                                  </h5>
+
+                                      <p class="price-container">
+
+                                       <span>$199</span>
+
+                                     </p>
+
+                        <span class="tag1"></span>
+
+             </div>
+
+             <div class="description">
+
+                <p>A Short product description here </p>
+
+             </div>
+
+                <div class="product-info smart-form">
+
+                   <div class="row">
+
+                   <div class="col-md-12">
+
+                    <a href="#" class="btn btn-danger">Add to cart</a>
+
+                       <a href="javascript:void(0);" class="btn btn-info">More info</a>
+
+                 </div>
+
+                <div class="col-md-12">
+
+                   <div class="rating">Rating:
+
+                    <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
+
+                    <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
+
+                    <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
+
+                    <label for="stars-rating-2"><i class="fa fa-star text-warning"></i></label>
+
+                    <label for="stars-rating-1"><i class="fa fa-star text-warning"></i></label>
+
+                   </div>
+
+                 </div>
+
+              </div>
+
+             </div>
+
+            </div>
+
+            </div>
+           </div>
+
+           <!-- end product -->
+           <!-- Second product box start here-->
+              <div class="prod-info-main prod-wrap clearfix">
+
+                    <div class="row">
+
+                         <div class="col-md-5 col-sm-12 col-xs-12">
+
+                          <div class="product-image">
+
+                           <img src="images/products/p4.png" class="img-responsive">
+
+                             <span class="tag2 hot">
+
+                               SPECIAL
+
+                             </span>
+
+                     </div>
+
+                </div>
+
+              <div class="col-md-7 col-sm-12 col-xs-12">
+
+                <div class="product-deatil">
+
+                             <h5 class="name">
+
+                             <a href="#">
+
+                              Product Code/Name here
+
+                             </a>
+
+                             <a href="#">
+
+                             <span>Product Category</span>
+
+                             </a>
+
+                      </h5>
+
+                          <p class="price-container">
+
+                           <span>$199</span>
+
+                         </p>
+
+              <span class="tag1"></span>
+
+              </div>
+
+              <div class="description">
+
+              <p>A Short product description here </p>
+
+              </div>
+
+              <div class="product-info smart-form">
+
+              <div class="row">
+
+              <div class="col-md-12">
+
+              <a href="#" class="btn btn-danger">Add to cart</a>
+
+              <a href="javascript:void(0);" class="btn btn-info">More info</a>
+
+              </div>
+
+              <div class="col-md-12">
+
+              <div class="rating">Rating:
+
+              <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
+
+              <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
+
+              <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
+
+              <label for="stars-rating-2"><i class="fa fa-star text-warning"></i></label>
+
+              <label for="stars-rating-1"><i class="fa fa-star text-warning"></i></label>
+
+              </div>
+
+              </div>
+
+              </div>
+
+              </div>
+
+              </div>
+
+              </div>
+              </div>
+
+          </div>
+          </div>
+
+          </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer><br>Copyright &copy; Ashlee Tan, 2021</footer>
+    </div>
+  </body>
+</html>

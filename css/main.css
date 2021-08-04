@@ -127,6 +127,9 @@ iframe {
 .clickable_button {
   text-decoration: none;
 }
+.clickable_button:active {
+  transform: translateX(1px) translateY(1px);
+}
 
 .clickable_button > a {
   text-decoration: none;
@@ -143,6 +146,7 @@ iframe {
   box-shadow: 0 0 15px 3px #000000bb;
 }
 
-.clickable_button > a > li:active {
-  box-shadow: 0 0 15px 3px #00000033;
+.clickable_button > a > li:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 15px 3px #00000077;
 }

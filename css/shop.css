@@ -22,6 +22,11 @@
 
 .item_cell:hover {
   box-shadow: 0 0 15px 3px #00000077;
+  transition: 0.3s;
+}
+
+.item_cell:active {
+  transform: translateX(1px) translateY(1px);
 }
 
 .item_cell .item_info {
@@ -69,6 +74,10 @@
   border-color: #35bd78bb;
 }
 
+#Shopping_Cart_Checkout_Modal .modal .btn-primary:hover {
+  background-color: rgba(44, 156, 100, 0.73);
+}
+
 #Shopping_Cart_Checkout_Modal .modal .btn-primary:focus {
   outline-color: #35bd78bb;
 }
@@ -85,4 +94,41 @@
 
 #Shopping_Cart_Checkout_Modal .list-group-item {
   background-color: #ffffffee;
+}
+
+#Shopping_Cart_Checkout_Modal #cart_table #itemFriendlyID {
+  width: 10%;
+}
+
+#Shopping_Cart_Checkout_Modal #cart_table #itemNAME {
+  width: 50%;
+}
+#Shopping_Cart_Checkout_Modal #cart_table #itemPRICE {
+  width: 20%;
+}
+
+#Shopping_Cart_Checkout_Modal #cart_table #itemQUANTITY {
+  width: 20%;
+}
+
+#Shopping_Cart_Checkout_Modal #cart_table {
+  width: 350px;
+}
+
+#Shopping_Cart_Checkout_Modal tr > td {
+  background-color: #ffffffee;
+  border-bottom-width: 1px;
+  border-bottom-color: #aaaaaaaa;
+
+  min-height: 68px;
+  padding: 0.5rem 1rem;
+}
+
+#Shopping_Cart_Checkout_Modal #header_row {
+  background: rgb(241,241,241);
+ background: linear-gradient(0deg, rgba(241,241,241,0.93) 0%, rgba(227,227,227,0.93) 56%, rgba(241,241,241,0.93) 100%);
+}
+
+#Shopping_Cart_Checkout_Modal tr:nth-child(odd):not(#header_row) > td {
+  background-color: #efefefee;
 }

@@ -1,0 +1,8 @@
+changes on 04-08-2021:
+- improved shop.html
+- added HTML5 local storage for the shopping cart
+- checkout dialog on shop.html has information in tabular HTML format now
+- lots of custom CSS for the table in shop.html modal added (nth child, padding, translate transform on button clicks, more)
+- lots of custom JS added to print in tabular format, now with quantity of item...
+- added Clear Cart button
+- changed Clear Cart and Pay Now button to be disabled if nothing inside cart using JS

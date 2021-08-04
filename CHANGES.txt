@@ -1,5 +1,6 @@
 changes on 04-08-2021:
 - improved shop.html
+- added favicon (webpage thumbnail in the tab bar)
 - added HTML5 local storage for the shopping cart
 - checkout dialog on shop.html has information in tabular HTML format now
 - lots of custom CSS for the table in shop.html modal added (nth child, padding, translate transform on button clicks, more)

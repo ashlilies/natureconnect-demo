@@ -124,9 +124,19 @@
   padding: 0.5rem 1rem;
 }
 
+/* for the header row only */
+#Shopping_Cart_Checkout_Modal tr > th {
+  border-bottom-width: thin;
+  border-bottom-color: #777777aa;
+
+  min-height: 27.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 #Shopping_Cart_Checkout_Modal #header_row {
   background: rgb(241,241,241);
- background: linear-gradient(0deg, rgba(241,241,241,0.93) 0%, rgba(227,227,227,0.93) 56%, rgba(241,241,241,0.93) 100%);
+  background: linear-gradient(0deg, rgba(241,241,241,0.93) 0%, rgba(227,227,227,0.93) 56%, rgba(241,241,241,0.93) 100%);
 }
 
 #Shopping_Cart_Checkout_Modal tr:nth-child(odd):not(#header_row) > td {

@@ -142,7 +142,7 @@ function show_cart()
     clear_cart_btn.setAttribute("disabled", "true");
     clear_cart_btn.removeAttribute("onclick");
   } else {
-    modal_body.innerHTML = "<table id=\"cart_table\" border=\"1\"><tr id=\"header_row\"><th id=\"itemFriendlyID\">ID</th><th id=\"itemNAME\">Product Name</th><th id=\"itemPRICE\">Price</th><th id=\"itemQUANTITY\">Quantity&nbsp;&nbsp;</th></tr></table>";
+    modal_body.innerHTML = "<table id=\"cart_table\" border=\"1\"><tr id=\"header_row\"><th id=\"itemFriendlyID\">ID</th><th id=\"itemNAME\">Product Name</th><th id=\"itemPRICE\">Price</th><th id=\"itemQUANTITY\">Quantity</th></tr></table>";
     cart_table = document.getElementById("cart_table").childNodes[0];
     clear_cart_btn.removeAttribute("disabled");
     clear_cart_btn.setAttribute("onclick", "clear_cart_confirm()\;");

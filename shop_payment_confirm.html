@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Confirmation</title>
+    <!-- web storage - extra marks, geolocation, drag-and-drop, 1 regex/validation -->
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shop_template.css">
+    <script src="script/shop.js" charset="utf-8"></script>
+    <!-- Bootstrap & dependencies -->
+    <!-- Proper rendering & touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest DOWNLOADED compiled and minified CSS -->
+    <link rel="stylesheet" href="dependencies/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <!-- jQuery library -->
+    <script src="dependencies/jquery/jquery-3.6.0.js"></script>
+    <!-- Popper JS -->
+    <script src="dependencies/popper-1.16.0/popper.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="dependencies/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            // let params = {};
+            // window.location.search.slice(1).split('&').forEach(elm => {
+            //   if (elm === '') return;
+            //   let spl = elm.split('=');
+            //   const d = decodeURIComponent;
+            //   params[d(spl[0])] = (spl.length >= 2 ? d(spl[1]) : true);
+            // });
+            //
+            // document.getElementById("fname").innerHTML = params["fname"];
+            // document.getElementById("lname").innerHTML = params["lname"];
+            // document.getElementById("email").innerHTML = params["email"];
+            // document.getElementById("phone").innerHTML = params["phone"];
+            // document.getElementById("delAddress").innerHTML = params["delAddress"];
+            // document.getElementById("cc").innerHTML = params["cc"];
+
+            function locstor_get()
+            {
+              if ("CartItems" in localStorage) {
+              let s_shopping_cart = localStorage.getItem("CartItems");
+              /* JSON.parse() */
+              shopping_cart = JSON.parse(s_shopping_cart);
+              console.log("Read shopping cart from local storage! Contents: " + shopping_cart);
+              } else
+                console.log("Shopping cart not present in local storage (first time user!?), not reading...")
+            }
+
+            function upd_price_payment()
+            {
+              let item_price, total_price, total_price_elem;
+
+              total_price = 0;
+              total_price_elem = document.getElementById("pay_total");
+
+              /* add up prices in cart */
+              for (var i = 0; i < shopping_cart.length; i++) {
+                item_price = get_item_price(shopping_cart[i]);
+                total_price += item_price;
+              }
+
+              /* had to add Number() as if total_price is int, toFixed() not a function */
+              total_price_elem.innerHTML = Number(total_price).toFixed(2);
+
+            }
+
+            var shopping_cart = [];
+
+             $("#product_listing").load("shop.html");
+
+            locstor_get();
+            upd_price_payment();
+
+            localStorage.removeItem("CartItems");
+
+        });
+    </script>
+  </head>
+  <body>
+    <div id="pageTop" class="container-fluid">
+      <h1 id="logo">&nbsp;&nbsp;NatureConnect</h1>
+      <ul class="nav navbar-default nav-pills flex-column flex-sm-row">
+        <li><a href="index.html" class="nav-item nav-link">Home</a></li>
+        <li><a href="calendar.html" class="nav-item nav-link">Calendar</a></li>
+        <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
+        <li><a href="#" class="nav-item nav-link active">Shop</a></li>
+        <li><a href="posts.html" class="nav-item nav-link">Posts</a></li>
+        <!-- padding for the right side so that the hover doesn't extend past-->
+        <span>&nbsp;&nbsp;</span>
+      </ul>
+    </div>
+    <!-- workaround for bootstrap alignment _reboot.css messing everything up -->
+    <!-- <br id="navbarGap"> -->
+    <div id="motd">
+      <span class="span12" id="visible">Loading...</span>
+      <span id="close" onclick="closeMotd();">&times;</span>
+    </div>
+    <div id="content">
+      <div id="title">
+        <h1>Payment Confirmation</h1>
+      </div>
+      <div id="product_listing" style="display: none;">
+        <table>
+          <!-- template for item cells (td)-->
+          <!--
+          <td class="item_cell">
+            <img src="content/shop/ITEMIMAGE.jpg"><table class="item_info"><tr><td>ITEMNAME</td><td>$ITEMPRICE</td></table></td> -->
+
+            <!-- <br><ul class="clickable_button"><a href="#" onclick="add_item()"><li>Add to Cart</li></a></ul> -->
+          <tr>
+            <!-- first row -->
+            <td class="item_cell">
+              <img src="content/shop/leaf_mug.jpg"><table class="item_info"><tr><td class="item_name">Leaf Mug</td><td class="item_price">$6.00</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/vase_flowers.jpg"><table class="item_info"><tr><td class="item_name">Vase with Flowers</td><td class="item_price">$9.00</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/air_plant.jpg"><table class="item_info"><tr><td class="item_name">Air Plant</td><td class="item_price">$4.00</td></table></td>
+          </tr>
+          <tr>
+            <!-- second row -->
+            <td class="item_cell">
+              <img src="content/shop/bigfoot.jpg"><table class="item_info"><tr><td class="item_name">Bigfoot Toy</td><td class="item_price">$13.00</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/mimosa.jpg"><table class="item_info"><tr><td class="item_name">Mimosa Seeds</td><td class="item_price">$7.50</td></table></td>
+            <td class="item_cell">
+              <img src="content/shop/bookmarks.jpg"><table class="item_info"><tr><td class="item_name">Assortment of Bookmarks</td><td class="item_price">$8.00</td></table></td>
+          </tr>
+        </table>
+        <h5>Total price of selected items: $<span id="shopping_cart_total">Loading...</span></h5>
+        <ul class="clickable_button"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="show_cart();"><li>Check Out</li></a></ul></div>
+      <div id="payment" style="display: none;">
+          <form class="" action="shop_payment_confirm.html" method="get">
+              <fieldset id="payment_form">
+                  <legend>Payment Form</legend>
+                  <label for="fname">First name: </label>
+                  <input type="text" id="fname" name="fname" placeholder="Jane" size="30" required><br>
+                  <label for="lname">Last name: </label>
+                  <input type="text" id="lname" name="lname" placeholder="Doe" size="30" required><br>
+                  <label for="email">E-mail address: </label>
+                  <input type="email" name="email" placeholder="somebody@example.com" size="30" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>
+                  <label for="phone">Phone number: </label>
+                  <input type="phone" id="phone" name="phone" size="30" placeholder="81234567"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>
+                  <label for="fname">Delivery address: </label>
+                  <input type="text" id="delAddress" name="delAddress" placeholder="420 Jurong West Central #01-23" size="30" required><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>
+                  <label for="fname">Credit Card: </label>
+                  <input type="text" id="cc" name="cc" placeholder="4532-5968-7415-8484" size="30" pattern="[0-9\s\-]{13,19}" required><span>&nbsp;</span><br style="margin-bottom: 20px;">
+                  <input type="submit" value="Submit" id="submitButton" style="display: none;">
+                  <ul class="clickable_button"><a href="#" onclick="document.getElementById('submitButton').click();"><li>Submit</li></a></ul>
+              </fieldset>
+          </form></div>
+      <div id="payConfirm">
+          <!-- <p>Your payment has been submitted! Details are as follows:</p>
+          <table>
+              <tr>
+                  <th>First Name</th>
+                  <td id="fname"></td>
+              </tr>
+              <tr>
+                  <th>Last Name</th>
+                  <td id="lname"></td>
+              </tr>
+              <tr>
+                  <th>E-Mail Address</th>
+                  <td id="email"></td>
+              </tr>
+              <tr>
+                  <th>Phone Number</th>
+                  <td id="phone"></td>
+              </tr>
+              <tr>
+                  <th>Delivery Address</th>
+                  <td id="delAddress"></td>
+              </tr>
+              <tr>
+                  <th>Credit Card</th>
+                  <td id="cc"></td>
+              </tr>
+
+          </table> -->
+          <p>Your payment of <strong>$<span id="pay_total"></span></strong> has been successfully made!</p>
+      </div>
+    </div>
+
+    <div id="Shopping_Cart_Checkout_Modal" style="display: none;">
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Your Shopping Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <!-- list of items in the shopping cart -->
+              <ul class="list-group list-group-flush" id="checkout_cart_list">
+                <div id="cart_display">
+
+                </div>
+                <!-- <li class="list-group-item">An item</li>
+                <li class="list-group-item">A sec.efkmsdlkfsdjlfkdsond item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li> -->
+              </ul>
+
+            </div>
+            <p><strong>Total price of items in cart: $<span id="checkout_total"></span></strong></p>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" id="clear_cart" onclick="clear_cart_confirm();">Clear Cart</button>
+              <form action="shop_payment.html">
+                  <button type="submit" class="btn btn-primary" id="pay_now">Pay Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+    <div class="footer">
+      <footer><br>Copyright &copy; Ashlee Tan, 2021</footer>
+    </div>
+  </body>
+</html>

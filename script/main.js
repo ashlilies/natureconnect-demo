@@ -67,7 +67,7 @@ function get_current_page_filename()
 function loadMotd()
 {
   let motdBanner = document.getElementById("motd");
-  motdBanner.querySelector("#" + "visible").innerHTML = "Buy our latest souvenirs today from the Shop!";
+  motdBanner.querySelector("#" + "visible").innerHTML = "NOTICE: New souvenirs now available in the <a href=\"shop.html\">Shop</a>! Buy today!";
 }
 
 /* our main() function, but in js, once the page is loaded execute what? */

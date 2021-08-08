@@ -1,4 +1,4 @@
-changes on 04-08-2021:
+=changes on 04-08-2021:
 - improved shop.html
 - added favicon (webpage thumbnail in the tab bar)
 - added HTML5 local storage for the shopping cart
@@ -7,3 +7,9 @@ changes on 04-08-2021:
 - lots of custom JS added to print in tabular format, now with quantity of item...
 - added Clear Cart button
 - changed Clear Cart and Pay Now button to be disabled if nothing inside cart using JS
+- ajax to load realtime shopping cart for payment processor
+- add payment processor
+- add use HTML5 local storage for the shopping carts
+- fixed gallery html
+
+SITE IS HOSTED AT: http://nc.purrito.org/

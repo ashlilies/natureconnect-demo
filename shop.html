@@ -70,7 +70,7 @@
             <td class="item_cell">
               <img src="content/shop/bigfoot.jpg"><table class="item_info"><tr><td class="item_name">Bigfoot Toy</td><td class="item_price">$13.00</td></table></td>
             <td class="item_cell">
-              <img src="content/shop/mimosa.jpg"><table class="item_info"><tr><td class="item_name">Mimosa Seeds</td><td class="item_price">$7.00</td></table></td>
+              <img src="content/shop/mimosa.jpg"><table class="item_info"><tr><td class="item_name">Mimosa Seeds</td><td class="item_price">$7.50</td></table></td>
             <td class="item_cell">
               <img src="content/shop/bookmarks.jpg"><table class="item_info"><tr><td class="item_name">Assortment of Bookmarks</td><td class="item_price">$8.00</td></table></td>
           </tr>
@@ -107,7 +107,9 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button type="button" class="btn btn-danger" id="clear_cart" onclick="clear_cart_confirm();">Clear Cart</button>
-              <button type="button" class="btn btn-primary" id="pay_now">Pay Now</button>
+              <form action="shop_payment.html">
+                  <button type="submit" class="btn btn-primary" id="pay_now">Pay Now</button>
+              </form>
             </div>
           </div>
         </div>
